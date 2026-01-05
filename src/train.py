@@ -1,3 +1,4 @@
+print("NEUROSENSE START")
 import os
 import pandas as pd
 import joblib
@@ -30,7 +31,7 @@ def main():
 
     # Load dataset
     if not os.path.exists(DATA_PATH):
-        raise FileNotFoundError(f"Dataset not found at {DATA_PATH}")
+        raise FileNotFoundError("Dataset not found at {DATA_PATH}")
 
     df = pd.read_csv(DATA_PATH)
     print("Dataset loaded with shape:", df.shape)
