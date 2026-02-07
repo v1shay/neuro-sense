@@ -1,43 +1,55 @@
 # NeuroSense
-
-NeuroSense is an end-to-end machine learning system for **non-invasive neurological risk estimation** using **speech biomarkers**. The project focuses on detecting neurological conditions (e.g., Parkinson’s disease) from voice recordings by extracting acoustic features and training supervised learning models, with inference exposed through a REST API.
-
----
-
-## Project Overview
-
-NeuroSense explores how acoustic properties of human speech can be leveraged for neurological screening. The system processes raw voice recordings, extracts clinically relevant features, trains supervised classifiers on public datasets, and serves predictions via an API for downstream applications.
-
-The project is designed as a **research-grade ML pipeline** with clean separation between data processing, modeling, and deployment.
+> An end-to-end system for non-invasive neurological risk estimation using speech-based biomarkers.
 
 ---
 
-## Core Capabilities
-
-- Speech signal preprocessing
-- Acoustic feature extraction
-- Supervised model training and evaluation
-- Parkinson’s disease risk classification
-- REST API for model inference
-- Modular, extensible architecture
+## Features
+- Acoustic feature extraction from raw voice recordings  
+- Supervised learning models for neurological risk estimation  
+- Focus on conditions such as Parkinson’s disease  
+- End-to-end pipeline from data ingestion to inference  
+- REST API for model inference and integration  
 
 ---
 
-## Repository Structure
+## Why This Exists
+Neurological conditions are often diagnosed late, after symptoms become difficult to ignore. Many early indicators exist, but they are subtle and hard to measure consistently in clinical settings.
 
+Speech is one such signal. Changes in voice can reflect underlying neurological changes, and recordings are easy to collect without invasive procedures. NeuroSense explores how these signals can be extracted and modeled in a systematic way.
+
+---
+
+## How It Works
+NeuroSense is built as a full pipeline rather than a standalone model.
+
+1. Voice recordings are collected and standardized  
+2. Acoustic features are extracted from the raw audio  
+3. Supervised learning models are trained on labeled data  
+4. Trained models are exposed through a REST API  
+5. New recordings can be evaluated through the API for risk estimation  
+
+Each stage is modular so feature sets, models, or deployment details can evolve independently.
+
+---
+
+## Tech Stack
+- **Language:** Python  
+- **ML:** Supervised learning models  
+- **Audio Processing:** Acoustic feature extraction libraries  
+- **Backend:** REST API  
+- **Architecture:** End-to-end ML pipeline  
+
+---
+
+## Project Structure
 ```text
-neuro-sense/
-│
-├── api/                # REST API for inference
-│   └── main.py         # API entrypoint
-│
-├── src/                # Core ML pipeline
-│   ├── preprocessing/  # Audio preprocessing & cleaning
-│   ├── features/       # Feature extraction (MFCCs, spectral features)
-│   ├── models/         # Training and evaluation scripts
-│   └── utils/          # Shared utilities
-│
-├── data/               # Voice datasets (raw / processed)
-├── requirements.txt    # Python dependencies
-├── .gitignore
+neurosense/
+├── data/
+│   ├── raw/
+│   └── processed/
+├── features/
+├── models/
+├── training/
+├── api/
+├── evaluation/
 └── README.md
