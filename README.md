@@ -11,7 +11,7 @@
 
 ## Results
 
-- **Accuracy:** 91%  
+- **Accuracy:** 91% validation accuracy
 - **Dataset:** 195 voice recordings (UCI Machine Learning Repository)  
 - **Publication:** Published in the *International Journal for Research* 
 - **Indexes:** Neuro-Sense has been indexed/is available on Google Scholar, ResearchGate, and OiPub
