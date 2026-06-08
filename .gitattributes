@@ -1,4 +1,4 @@
 *.py linguist-detectable=false
-*.pyx linguist-language=Cython
+*.pyx linguist-language=C
 venv/** linguist-vendored
 research/** linguist-documentation
